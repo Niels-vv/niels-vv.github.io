@@ -30,9 +30,7 @@ var options = {
 };
 var boost = window.boostInit("turesearch", options);
 
-function openChat() {
-  boost.setConversationId("testsss", { continueConversation: true });
-  
+function openChat() {  
   boost.chatPanel.show();
 }
 
