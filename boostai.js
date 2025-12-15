@@ -26,6 +26,7 @@ var options = {
       enableProactivityForSmallDevices: true,
       alwaysFullscreen: false,
       conversationId: "1234567",
+      sessionId: "1234567",
     },
   },
 };
