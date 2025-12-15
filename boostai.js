@@ -33,7 +33,9 @@ var boost = window.boostInit("turesearch", options);
 
 function openChat() {  
   options.chatPanel.settings.conversationId = "4445554";
+  boost.chatPanel.setConversationId("4353232");
   boost.chatPanel.show();
+  boost.chatPanel.setConversationId("4353232");
 }
 
 function downloadConversation() {
