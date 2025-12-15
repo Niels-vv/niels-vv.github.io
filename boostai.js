@@ -35,8 +35,15 @@ var boost = window.boostInit("turesearch", options);
 function openChat() {  
   options.chatPanel.settings.conversationId = "4445554";
   boost.chatPanel.setConversationId("4353232");
-  boost.chatPanel.sendMessage("hoiii");
+  boost.chatPanel.sendMessage("Ja graag");
   boost.chatPanel.setConversationId("4353232");
+
+  const endpoint = "https://turesearch/api/chat/v2/conversation/download/2051170";
+
+  fetch(endpoint, { credentials: "include" })
+    .then((res) => res.text())
+    .then(console.log)
+    .catch(console.error);
 }
 
 function downloadConversation() {
