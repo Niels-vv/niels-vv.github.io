@@ -25,14 +25,14 @@ var options = {
       authStartTriggerActionId: 5281,
       enableProactivityForSmallDevices: true,
       alwaysFullscreen: false,
-      conversationId: "123456789456123",
+      conversationId: "1234567",
     },
   },
 };
 var boost = window.boostInit("turesearch", options);
 
 function openChat() {  
-  options.chatPanel.settings.conversationId = "44444444444444555";
+  options.chatPanel.settings.conversationId = "4445554";
   boost.chatPanel.show();
 }
 
