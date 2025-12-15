@@ -1,12 +1,12 @@
 var options = {
   chatPanel: {
     header: {
-      title: "Coco",
+      title: "Sol",
     },
     styling: {
       avatarShape: "rounded",
       avatarUrl:
-        "docs/assets/images/Mental_health_bloem1.png",
+        "",
       primaryColor: "#A98AB0",
       chatBubbles:{
         userBackgroundColor: "#C6E9EA",
