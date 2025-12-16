@@ -25,8 +25,6 @@ var options = {
       authStartTriggerActionId: 5281,
       enableProactivityForSmallDevices: true,
       alwaysFullscreen: false,
-      conversationId: "1234567",
-      sessionId: "1234567",
     },
   },
 };
