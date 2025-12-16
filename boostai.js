@@ -30,22 +30,10 @@ var options = {
     },
   },
 };
-var boost = window.boostInit("turesearch", options);
 
-function openChat() {  
-  options.chatPanel.settings.conversationId = "4445554";
-  boost.chatPanel.setConversationId("4353232");
-  boost.chatPanel.sendMessage("Ja graag");
-  boost.chatPanel.setConversationId("4353232");
-
-  const endpoint = "https://turesearch/api/chat/v2/conversation/download/2051170";
-
-  fetch(endpoint, { credentials: "include" })
-    .then((res) => res.text())
-    .then(console.log)
-    .catch(console.error);
-}
-
-function downloadConversation() {
-  const endpoint = "https://<address>/api/chat/v2/conversation/download/testsss";
+function openChat(intentID) {  
+  options.chatPanel.settings.startTriggerActionId = intentID;
+  options.chatPanel.settings.authStartTriggerActionId = intentID;
+  var boost = window.boostInit("turesearch", options);
+  boost.chatPanel.show();
 }
