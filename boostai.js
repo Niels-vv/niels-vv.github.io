@@ -41,11 +41,23 @@ function openChat(intentID) {
     loader = document.getElementById("chat-loader-4");
   }
   loader.style.display= "block";
+  const observer = new MutationObserver((mutations, obs) => {
+    const chatwindows = document.getElementsByClassName("Boost-ChatPanel-Window");
+    if (chatwindows.length > 0) {
+      // Hide loader when element is found
+      loader.style.display = 'none';
+      obs.disconnect(); // Stop observing
+    }
+  });
+  // Start observing the document with the configured parameters
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
 
   options.chatPanel.settings.startTriggerActionId = intentID;
   options.chatPanel.settings.authStartTriggerActionId = intentID;
   var boost = window.boostInit("turesearch", options);
   boost.chatPanel.show();
 
-  loader.style.display= "none";
 }
