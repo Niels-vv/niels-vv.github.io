@@ -17,15 +17,30 @@
   <!-- Main content -->
   <main class="container">
     Start a chat. Only one can be started each session; they're all shown here to allow you to test them.
-    <p></p>
-    <button class="chat-button" onclick="javascript:openChat(5419)">Start chat: Imagine + 1st</button> <!-- Imagining + 1st person -->
-    <p></p>
-    <button class="chat-button" onclick="javascript:openChat(5422)">Start chat: Imagine + 2nd</button> <!--  # Imagining + 2nd person -->
-    <p></p>
-    <button class="chat-button" onclick="javascript:openChat(5425)">Start chat: Recall + 1st</button> <!--  # Recall + 1st person -->
-    <p></p>
-    <button class="chat-button" onclick="javascript:openChat(5428)">Start chat: Recall + 2nd</button> <!--  # Recall + 2nd person -->
-    <p></p>
+    <div>
+      <p></p>
+      <button class="chat-button" onclick="javascript:openChat(5419)">
+        Start chat: Imagine + 1st
+        <div class="loader" id="chat-loader-1" style="display:none;"></div>
+      </button> <!-- Imagining + 1st person -->
+      <p></p>
+      <button class="chat-button" onclick="javascript:openChat(5422)">
+        Start chat: Imagine + 2nd
+        <div class="loader" id="chat-loader-2" style="display:none;"></div>
+      </button> <!--  # Imagining + 2nd person -->
+      <p></p>
+      <button class="chat-button" onclick="javascript:openChat(5425)">
+        Start chat: Recall + 1st
+        <div class="loader" id="chat-loader-3" style="display:none;"></div>
+      </button> <!--  # Recall + 1st person -->
+      <p></p>
+      <button class="chat-button" onclick="javascript:openChat(5428)">
+        Start chat: Recall + 2nd
+        <div class="loader" id="chat-loader-4" style="display:none;"></div>
+      </button> <!--  # Recall + 2nd person -->
+      <p></p>
+      <div class="loader"></div> 
+    </div>
     <form class="form">
       <input type="text" id="participant-id" placeholder="Participant ID" required>
 
@@ -90,6 +105,7 @@
 
 </body>
 </html>
+
 
 
 
